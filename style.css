@@ -1,0 +1,551 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+
+}
+.main-container{
+    max-width: 1366px;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    background-color: rgba(191, 211, 226, 0.521);
+}
+.bars,.close{
+    display: none;
+}
+.home-div{  
+    position: relative;
+    background-color: rgba(191, 211, 226, 0.726);
+}
+.home-div::before,.home-div::after{
+    content: '';
+    width: 850px;
+    height: 850px;
+    position: absolute;
+    top: -40%;
+    left: 40%;
+    background-color: #fff; 
+    border-radius: 50%;
+}
+.home-div::after{
+    background-color: rgba(191, 211, 226, 0.726);
+    width: 760px;
+    height: 760px;
+    top: -25%;
+    left: 50%;
+}
+
+header{
+    display: flex;
+    position: relative;
+    z-index: 999;
+}
+.logo-div{
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-img{
+    width: 90px;
+    border-radius: 100%;
+    mix-blend-mode: multiply;
+    box-shadow: 0px 2px 0px  gray;
+}
+.logo-text{
+    font-size:large;
+    margin-top: 0.5em;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.ul{
+    max-width: 750px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1em;
+}
+.ul li, li button{
+    list-style: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.signUp-btn{
+    background-color: rgba(255, 166, 0, 0.205);
+    border: none;
+    color: rgb(255, 166, 0);
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+}
+
+.banner-div{
+    position: relative;
+   margin: 10em 0 0 7em;
+   padding-bottom: 9.5em;
+    z-index: 900;
+}
+.banner-heading,.about-work {
+    font-family: monospace;
+    font-size: 2.5em;
+    font-weight:bolder;
+    color: rgb(18, 18, 51);
+text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);  
+}
+
+.banner-img {
+   width: 100%;
+    position: absolute;
+    top: -2%;
+    right: -40%;
+}
+.banner-img img{
+    width: 600px;
+}
+/* Styles for the search container */
+.search-div {
+    width: fit-content;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styles for the blur background */
+  .search-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(191, 211, 226, 0.959);
+   filter: blur(5px); 
+    z-index: -1;
+    border-radius: inherit;
+  }
+  
+  /* Styles for the input fields and button */
+  .search-div input[type="text"],
+  .search-div button {
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .search-div input[type="text"]{
+    padding-left: 1.7em;
+  }
+  /* Style the button separately */
+  .search-div button.search-btn,.view-btn {
+    background-color: rgb(255, 123, 0);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1.5em;
+    font-weight: bold;
+  }
+  .search-div i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  .search-div i.fa-briefcase {
+    left: 2em; 
+  }
+  
+  /* Styles for the second icon (location) */
+  .search-div i.fa-map-marker-alt {
+    left:18em; 
+  }
+  .marquee-div {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    line-height: 3.5em;
+  }
+  
+  .marquee {
+    white-space: nowrap;
+    animation: move 25s linear infinite;
+  }
+  .marquee img{
+    width: 100px;
+    padding-left: 3em;
+    opacity: 0.5;
+  }
+  .about-div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+  }
+  .about{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .about-img{
+   width: 350px;
+   height: 350px;
+    border-radius: 50%;
+    background:rgba(191, 211, 226, 0.623);
+filter: drop-shadow(0 6px 1px rgba(0, 0, 0, 0.692));
+  }
+   .manimg{
+width: 300px;
+filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.692));
+  }
+  .about-img .messageicon{
+    position: absolute;
+    top: 55%;
+    right: 20%;
+    width: 100px;
+  }
+  .about-work{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .about-work h1{
+    font-size:.7em;
+    font-weight: bold;
+  }
+  .about-work h3{
+    font-size: .5em;
+  }
+  .about-work p ,i{
+font-size:medium;
+color: gray;
+  }
+  .service{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 3em;
+  }
+  .achivement-div ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .achivement-div ul li{
+    width: fit-content;
+list-style: none;
+font-weight: bold;
+text-align: center;
+padding: .7em 2em;
+box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  }
+  .achivement-div ul li i{
+    width: 30px;
+    height:30px;
+padding-top: 7px;
+    background-color: rgba(255, 255, 255, 0.527);
+    border-radius: 50%;
+  }
+  .achivement-div ul li:hover{
+    border-radius: 1em;
+  }
+  
+  .list1,.list2,.list3{
+    color: white;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+  }
+  .list3,.list4,.list5{
+    color: white;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+  .list1,.list5{
+    color: gray;
+    background-color: white;
+  }
+  .list2{
+    background-color: rgb(6, 6, 41);
+  }
+  .list3{
+    background-color: purple;
+  }
+  .list4{
+    background-color: skyblue;
+  }
+  #job-div,.signUp-div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+
+  }
+  .job-card {
+    width: 230px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 300px;
+    background-color: white;
+    display: none; /* Initially hide all job cards */
+cursor: pointer;
+  }
+  .job-card:hover{
+    background-color: rgb(255, 179, 56);
+box-shadow: 4px 5px 4px 4px rgba(0, 0, 0, 0.3);
+
+  }
+  .job-card img {
+    max-width: 100px;
+    mix-blend-mode: multiply;
+  }
+  #view-more-btn {
+    display: block;
+    margin: 10px auto;
+  }
+  .job-type{
+    font-weight: bold;
+    border-radius: 1em;
+    padding: .5em;
+    text-align: center;
+  }
+  .job-title{
+    font-weight: bold;
+    font-size:large;
+    color: rgb(18, 18, 51);
+text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+  .place-day{
+    font-weight: bold;
+    color: gray;
+    letter-spacing: .5px;
+  }
+  .intern{
+    background-color: rgba(135, 207, 235, 0.295);
+    color: rgb(56, 196, 252);
+  }
+  .part-time{
+    background-color: rgba(128, 0, 128, 0.295);
+    color: rgb(114, 0, 114);
+  }
+  .full-time{
+    background-color: rgba(0, 128, 0, 0.295);
+    color: rgb(0, 131, 0);
+  }
+  .view-btn{
+    border:none;
+   border-radius: 1em;
+box-shadow: 1px 5px 4px 1px rgb(255, 179, 56);
+
+  }
+
+  .signUp-div{
+    text-align: center;
+    margin-bottom: 2em;
+    overflow: hidden;
+  }
+  .inner-signUp{
+    position: relative;
+    width: 700px;
+    border-radius: 1em;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(6, 6, 32);
+    padding: 2em 5em;
+    overflow: hidden;
+
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s; 
+  }
+  @keyframes move{
+    0%,100%{
+      transform: translateX(0);
+    }
+    25%{
+      transform: translateX(50%);
+    }75%{
+      transform: translateX(-50%);
+    }
+  }
+ 
+  @keyframes oppositemove{
+    0%,100%{
+      transform: translateX(0);
+    }
+    25%{
+      transform: translateX(-50%);
+    }75%{
+      transform: translateX(50%);
+    }
+  }
+ 
+  
+/* For smaller screens */
+@media only screen and (max-width: 768px) {
+    .header{
+        display: flex;
+        justify-content: space-between;
+      border-radius: 8px;
+       }
+       .logo-div{
+        width: 200px;
+       }
+      .bars{
+        display: block;
+              color: black;
+              font-size: 25px;
+              background-color: transparent;
+              box-shadow: none;
+              border: none;
+        cursor: pointer;
+        margin-right: 1em;
+        text-shadow: 2px 2px 8px gray;
+      
+      }
+      nav{
+        position: absolute;
+        top: 1%;
+        left: 0;
+      }
+        .ul {
+          width: 90%;
+          height: 100vh;
+          display:none;
+          flex-direction: column;
+    justify-content: center;
+    align-items: center;
+          position: absolute;
+          right: 0;
+          background-color: whitesmoke;
+          z-index: 2000;
+          line-height: 3.5em; 
+        }
+        .signUp-btn{
+            background-color: transparent;
+            color:black;
+        }
+li:hover{
+    font-size: larger;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);  
+
+}
+        .close {
+          position: absolute;
+          z-index: 999;
+          display: block;
+          color: black;
+          font-size: 30px;
+          /* position: relative; */
+          top: .5em;
+          right: .5em;
+          text-shadow: 2px 2px 8px 0px gray;
+          border: none;
+          cursor: pointer;
+      
+      }
+      .displaytoggle {
+        display: flex;
+      }
+      .banner-div{
+        display: flex;
+        flex-direction: column; 
+         justify-content: center;
+        align-items: center;
+        margin-top: 4em;
+        margin-left:1em; 
+        padding-bottom: 5em;
+      }
+      .banner-heading{
+        width: 100%;
+        justify-content: left;
+        font-size: 1.5em;
+      }
+      .search-div{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+      }
+      .search-div i.fa-map-marker-alt {
+        top: 20%;
+        left:2em; 
+      }
+      .banner-img {
+        top: 10%;
+      }
+      .banner-img img{
+        width:0;
+   }
+   .donut-div .img1{
+    width: 100px ; 
+   }
+   .about{
+    overflow: hidden;
+    flex-direction: column;
+  }
+  .about-img{
+    display: none;
+  }
+  .about-work{
+margin-top: 1em;
+margin-bottom: 1em;
+  }
+  .about-work h1{
+    font-size: .5em;
+  }
+  .about-work h2{
+    font-size: .3em;
+  }
+  .about-work p{
+font-size: small;
+  }
+  .service{
+    flex-direction: column;
+    margin-top: 0em;
+    text-align: center;
+  }
+  .job-card{
+    width:100%;
+    font-size: smaller;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   .banner-div{
+    margin-left: 1em;
+   }
+
+}
+  @media only screen and (min-width: 1025px) {
+
+  }
