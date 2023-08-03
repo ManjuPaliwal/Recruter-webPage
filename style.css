@@ -9,7 +9,7 @@ body{
     justify-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     overflow-x: hidden;
-
+scroll-behavior: smooth;
 }
 .main-container{
     max-width: 1366px;
@@ -78,7 +78,11 @@ nav{
     align-items: center;
     padding-top: 1em;
 }
-.ul li, li button{
+.ul a{
+  color: black;
+  text-decoration: none;
+}
+.ul li, li button ,.address-div ul li{
     list-style: none;
     font-weight: bold;
     cursor: pointer;
@@ -90,7 +94,10 @@ nav{
     border-radius: 0.5em;
     padding: 0.5em 1em;
 }
-
+.signUp-btn:hover,.search-div button:hover{
+  color: whitesmoke;
+  box-shadow: 1px 2px 4px 1px rgb(255, 179, 56);
+}
 .banner-div{
     position: relative;
    margin: 10em 0 0 7em;
@@ -176,6 +183,7 @@ text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
     line-height: 3.5em;
+    background-color: white;
   }
   
   .marquee {
@@ -185,7 +193,7 @@ text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
   .marquee img{
     width: 100px;
     padding-left: 3em;
-    opacity: 0.5;
+    mix-blend-mode: multiply;
   }
   .about-div{
     position: relative;
@@ -327,13 +335,13 @@ box-shadow: 4px 5px 4px 4px rgba(0, 0, 0, 0.3);
     padding: .5em;
     text-align: center;
   }
-  .job-title{
+  .job-title,.address-div h2{
     font-weight: bold;
     font-size:large;
     color: rgb(18, 18, 51);
 text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
   }
-  .place-day{
+  .place-day,p,.address-div ul li{
     font-weight: bold;
     color: gray;
     letter-spacing: .5px;
@@ -373,6 +381,20 @@ box-shadow: 1px 5px 4px 1px rgb(255, 179, 56);
     overflow: hidden;
 
   }
+  .footer,.address-div {
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: white;
+    padding: 2em;
+    overflow: hidden;
+    box-shadow: 1px 2px 4px 2px rgb(6, 6, 32);
+}
+.address-div{
+  align-items:flex-start;
+}
+  
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -519,6 +541,7 @@ li:hover{
   .about-work{
 margin-top: 1em;
 margin-bottom: 1em;
+text-align: center;
   }
   .about-work h1{
     font-size: .5em;
@@ -538,6 +561,16 @@ font-size: small;
     width:100%;
     font-size: smaller;
   }
+ 
+.footer{
+  display: block;
+}
+.address-div {
+  text-align: left;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

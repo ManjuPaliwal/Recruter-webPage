@@ -1,6 +1,7 @@
 let bars = document.querySelector('.bars');
 let ul = document.querySelector('.ul');
-let close = document.querySelector('.close')
+let close = document.querySelector('.close');
+let lists = document.querySelectorAll('.list')
 bars.addEventListener('click',function(){
 ul.classList.toggle('displaytoggle')
 });
@@ -8,6 +9,15 @@ close.addEventListener('click',function(){
 ul.classList.toggle('displaytoggle')
 
 });
+
+lists.forEach((list)=>{
+  list.addEventListener('click',()=>{
+    ul.classList.toggle('displaytoggle');
+    console.log('hello');
+  })
+})
+
+
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (

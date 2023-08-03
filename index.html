@@ -14,7 +14,7 @@
 
 <body>
     <div class="main-container">
-        <div class="home-div">
+        <div class="home-div" id="home">
             <header class="header">
                 <div class="logo-div">
                     <img src="https://media.istockphoto.com/id/1165954144/photo/family-teamwork-five-people-3d-blue-color-render-illustration.jpg?s=612x612&w=0&k=20&c=eWN53txPm75WAWAoAJ-lku2RPM-Hw0Q4w3zEErPqJrk="
@@ -25,15 +25,15 @@
                 <nav>
                     <ul class="ul">
                         <button class="close btn"><i class="fa fa-window-close"></i></button>
-                        <li>Home</li>
-                        <li>Jobs</li>
-                        <li>Categories</li>
-                        <li>AboutUs</li>
-                        <li><button class="signUp-btn">Sign Up</button></li>
+                        <li class="list"><a href="#home">Home</a></li>
+                        <li class="list"><a href="#jobs">Jobs</a></li>
+                        <li class="list"><a href="#aboutUs">AboutUs</a></li>
+                        <li class="list"><a href="#contact">Contact</a></li>
+                        <li class="list"><button class="signUp-btn">Sign Up</button></li>
                     </ul>
                 </nav>
             </header>
-            <div class="banner-div">
+            <div class="banner-div" >
                 <div class="banner-heading">
                     <h1>Explore Thousands <br> of Dream Jobs</h1>
                     <p>And build your career up higher</p>
@@ -101,7 +101,7 @@
             </div>
 
         </div>
-        <div class="about-div">
+        <div class="about-div" id="aboutUs">
             <div class="about">
                 <div class="about-img">
                     <img src="./image/stockman.png" alt="" class="manimg">
@@ -121,13 +121,13 @@
                     <h3> <i class="fas fa-briefcase"></i> Enhance your career</h3>
                     <p>With Hirefice, you can get better oportunities <br> for apply so many amazing jobs</p>
                     <h1>We always help to help you with</h1>
-                    <h3> <i class="fas fa-briefcase"></i> Communicate with others</h3>
+                    <h3> <i class="fas fa-comments"></i> Communicate with others</h3>
                     <p>You may know other applicants, <br> talk with them and share some knowledge</p>
                 </div>
             </div>
             <div class="service">
                 <div class="about-work scroll-text">
-                    <h1>Reach your dream  with other talented</h1>
+                    <h1>Reach your dream with other talented</h1>
                     <p>EveryThing you're looking for can be <br> found in this amazing platform</p>
                 </div>
                 <div class="achivement-div scroll-text">
@@ -142,33 +142,77 @@
             </div>
 
         </div>
-        <div class="about-work scroll-text" style="text-align:center;">
-            <h1>Poular Jobs</h1>
+        <div class="about-work scroll-text" style="text-align:center;" id="jobs">
+            <h1>Popular Jobs</h1>
             <p>We have 1000+ popular jobs in many companies</p>
         </div>
-        <div id="job-div"> </div>
+        <div id="job-div" class="scroll-text"> </div>
         <button id="view-more-btn" class="view-btn">View More</button>
 
         <div class="signUp-div scroll-text">
             <div class="inner-signUp">
                 <h1>Get Your job now!</h1>
                 <p>Start your journey with other applicants and make <br>your dream come </p>
-        <button  class="view-btn">Sign Up</button>
-        <div class="donut-div img3">
-            <img src="./image/stockimg3.png" alt="icon">
-        </div>
-        <div class="donut-div img4">
-            <img src="./image/stockimg4.png" alt="icon">
-        </div>
-        <div class="donut-div img2">
-            <img src="./image/stockimg2.png" alt="icon">
-        </div>
+                <button class="view-btn">Sign Up</button>
+                <div class="donut-div img3">
+                    <img src="./image/stockimg3.png" alt="icon">
+                </div>
+                <div class="donut-div img4">
+                    <img src="./image/stockimg4.png" alt="icon">
+                </div>
+                <div class="donut-div img2">
+                    <img src="./image/stockimg2.png" alt="icon">
+                </div>
             </div>
+
+        </div>
+        <div class="footer" id="contact">
+            <div class="cpoy-right">
+                <div class="logo-div">
+                    <img src="https://media.istockphoto.com/id/1165954144/photo/family-teamwork-five-people-3d-blue-color-render-illustration.jpg?s=612x612&w=0&k=20&c=eWN53txPm75WAWAoAJ-lku2RPM-Hw0Q4w3zEErPqJrk="
+                        alt="logo" class="logo-img">
+                    <h1 class="logo-text">hirefice</h1>
+                </div>
+                <p>Hirefice is technology company that allows eople to apply a jobs</p>
+                <p><span style="color:skyblue; font-weight: bold;">&copy;</span> 2023 My Company. All rights reserved. Created by <span style="color: rgb(8, 14, 46);">Manju Paliwal</span></p>
+            </div>
+                <div class="address-div">
+                    <div class="support">
+                        <h2>Support</h2>
+                        <ul>
+                            <li>Terms of Use</li>
+                            <li>Cookies Use</li>
+                            <li>FAQ</li>
+                            <li>Privacy Policy</li>
+                            <li>Resources</li>
+                        </ul>
+                    </div>
+                    <div class="About Us">
+                        <h2>About Us</h2>
+                        <ul>
+                            <li>About Us</li>
+                            <li>Blog</li>
+                            <li>Service</li>
+                            <li>Our Team</li>
+                            <li>Contacts</li>
+                        </ul>
+                    </div>
+                    <div class="Our Address">
+                        <h2>Our Address</h2>
+                        <ul>
+                            <li>1717 Hwy East</li>
+                            <li>Athens AL 35611</li>
+                            <li>hello@hirefice.com</li>
+                            <li>  <i class="fab fa-instagram"></i> &nbsp; &nbsp; <i class="fab fa-facebook"></i> &nbsp; &nbsp; <i class="fab fa-twitter"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
             
         </div>
     </div>
 
-    </div>
+    
     <script src="./script.js"></script>
     <!-- jQuery library -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
